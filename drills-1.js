@@ -1,5 +1,9 @@
-'use strict'
+'use strict';
 
 // 1
 
-console.log('Hi, my name is Daniel and I\'m 26');
+function createGreeting(name, age) {
+  console.log(`Hi, my name is ${name} and I'm ${age}`);
+}
+
+createGreeting();
