@@ -7,8 +7,6 @@ function jediName(firstName, lastName) {
   return jediFullName;
 }
 
-console.log(jediName('Bobin', 'jobe'));
-
 // To Infinity
 
 function beyond(num) {
@@ -25,8 +23,6 @@ function beyond(num) {
     console.log('Staying home');
   }
 }
-
-beyond(0);
 
 //Cracking the code
 
@@ -54,5 +50,30 @@ function decode(codedSentence) {
   return decodedMessage;
 }
 
-console.log(decode('craft block argon meter bells brown croon droop'));
-//For loop
+// days in a month
+
+function daysInMonth(month,leapYear=false) {
+  let thirtyOne = ['January', 'March', 'May', 'July', 'August', 'October', 'December'];
+  let thirty = ['April', 'June', 'September', 'November'];
+
+  if (!(thirtyOne.includes(month) || thirty.includes(month) || month === 'February')) {
+    throw 'Must provide a valid month';
+  }
+
+  switch(true) {
+  case thirtyOne.includes(month):
+    return `${month} has 31 days`;
+    
+  case thirty.includes(month):
+    return `${month} has 30 days`;
+    
+  case month === 'February':
+    if (leapYear === true) {
+      return 'February has 29 days';
+    } else {
+      return 'February has 28 days';
+    }
+  }
+}
+
+//
